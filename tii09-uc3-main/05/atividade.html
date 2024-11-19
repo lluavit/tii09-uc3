@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação por Idade</title>
+</head>
+<body>
+    <script>
+       
+        window.onload = function() {
+            
+            const idade = prompt("Digite sua idade:");
+
+            
+            if (isNaN(idade) || idade === "") {
+                console.log("Por favor, insira uma idade válida.");
+            } else {
+               
+                const idadeNum = Number(idade);
+                
+               
+                if (idadeNum < 12) {
+                    console.log("Criança");
+                } else if (idadeNum >= 12 && idadeNum <= 17) {
+                    console.log("Adolescente");
+                } else if (idadeNum >= 18 && idadeNum <= 64) {
+                    console.log("Adulto");
+                } else if (idadeNum >= 65) {
+                    console.log("Idoso");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
